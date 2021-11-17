@@ -1,0 +1,51 @@
+@import 'variables';
+@import 'mixins';
+
+@mixin typography-base {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: $baseTextColor;
+  font-style: normal;
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin page-title($color: $baseTextColor) {
+  font-size: 48px;
+  line-height: 62px;
+  font-weight: 700;
+  color: $color;
+  text-transform: uppercase;
+
+  @include mobile {
+    font-size: 32px;
+    line-height: 44px;
+  }
+}
+
+@mixin section-title($color: $baseTextColor) {
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 700;
+  color: $color;
+  text-transform: uppercase;
+
+  @include mobile {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@mixin block-title($color: $baseTextColor) {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+  color: $color;
+
+  @include mobile {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

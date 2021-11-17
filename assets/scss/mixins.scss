@@ -1,0 +1,74 @@
+@import 'variables';
+
+// resets
+@mixin a-reset {
+  text-decoration: none;
+  color: inherit;
+  transition: all .25s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@mixin ul-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin button-reset {
+  background: none;
+  border: 0;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  transition: all .25s;
+}
+
+@mixin input-reset {
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin fixed-centered {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+// customs
+@mixin flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-dynamic-main($bgc: $yellow, $border: 0, $color: $baseTextColor) {
+  @include flex-centered;
+  @include button-reset;
+  width: 300px;
+  height: 56px;
+  border: $border;
+  border-radius: 2px;
+  background-color: $bgc;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: $color;
+  text-transform: uppercase;
+}
+
+// media-queries
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: 420px) {
+    @content;
+  }
+}

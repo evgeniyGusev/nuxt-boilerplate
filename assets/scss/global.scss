@@ -1,0 +1,41 @@
+@import 'mixins';
+@import 'typography';
+@import 'variables';
+@import 'ui-kit';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  @include typography-base;
+  overflow-x: hidden;
+}
+
+footer {
+  color: $greySoft;
+}
+
+button {
+  @include button-reset;
+}
+
+ul {
+  @include ul-reset;
+}
+
+a {
+  @include a-reset;
+}
+
+input {
+  @include input-reset;
+}
